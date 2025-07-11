@@ -1,0 +1,11 @@
+version: '3.2'
+services:
+  cs-thesis-template:
+    build:
+      context: .
+      dockerfile: tools/docker/Dockerfile
+    image: cs-thesis-template:1.0
+    volumes:
+      - .:/opt/src:z
+    command: bash -c "while true; do sleep 10; done"
+    tty: true

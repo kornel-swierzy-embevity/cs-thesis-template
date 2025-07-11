@@ -1,0 +1,5 @@
+version: '3'
+services:
+  cs-thesis-template:
+    environment:
+      - "LOCAL_USER_ID=1000"

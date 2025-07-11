@@ -1,0 +1,26 @@
+{
+    "name": "Existing Docker Compose (Extend)",
+    "dockerComposeFile": [
+        "../docker-compose.yml",
+        "docker-compose.yml"
+    ],
+    "service": "cs-thesis-template",
+    "workspaceFolder": "/opt/src",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "James-Yu.latex-workshop",
+                "mhutchie.git-graph",
+                "EditorConfig.EditorConfig",
+            ],
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "zsh"
+            }
+        }
+    },
+    "remoteUser": "docker",
+    "updateRemoteUserUID": false,
+    "remoteEnv": {
+        "LOCAL_USER_ID": "1000"
+    },
+}
