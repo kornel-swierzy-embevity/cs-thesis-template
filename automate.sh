@@ -13,9 +13,9 @@ readonly ScriptDir="$(dirname -- "$( readlink -f -- "${0}"; )";)"
 readonly ScriptName="$(basename "${0}")"
 readonly RootDir="$( readlink -f -- "${ScriptDir}/.."; )"
 
-readonly CLIModeBuildPdf=   "build-pdf"
+readonly CLIModeBuildPdf="build-pdf"
 readonly CLIModeBuildDocker="build-docker"
-readonly CLIModeRunDocker=  "run-docker"
+readonly CLIModeRunDocker="run-docker"
 
 readonly MainFile="main.tex"
 readonly BuildDir="_build"
