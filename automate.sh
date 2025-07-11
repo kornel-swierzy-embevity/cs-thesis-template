@@ -109,7 +109,7 @@ runDocker() {
         __Command="docker compose"
     fi
 
-    ${__Command} run -e LOCAL_USER_ID=$(id -u) "${DockerComposeService}" bash
+    ${__Command} run -e LOCAL_USER_ID=$(id -u) -e LOCAL_GROUP_ID=$(id -g) "${DockerComposeService}" bash
 }
 
 # Main

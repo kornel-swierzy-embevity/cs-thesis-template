@@ -18,7 +18,7 @@
             }
         }
     },
-    "remoteUser": "docker",
+    "remoteUser": "user",
     "updateRemoteUserUID": false,
     "remoteEnv": {
         "LOCAL_USER_ID": "1000"
