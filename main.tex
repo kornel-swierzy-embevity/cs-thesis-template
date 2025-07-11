@@ -1,0 +1,68 @@
+\documentclass[12pt,a4paper]{book}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage[polish]{babel}
+\usepackage{xurl}
+\usepackage{afterpage}
+\usepackage{float}
+\usepackage[nottoc]{tocbibind}
+\usepackage{lscape}
+\usepackage{appendix}
+
+% Commands
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
+% Page layout
+\geometry{a4paper, margin=1in}
+\setstretch{1.5} % Line spacing
+
+% Images
+\graphicspath{ {./resources/} }
+
+% Change appendicies name
+\addto\captionspolish{%
+  \renewcommand\appendixname{Załącznik}
+  \renewcommand\appendixpagename{Załączniki}
+}
+
+% Document
+\begin{document}
+
+% Title Page
+\include{chapters/00_title.tex}
+\afterpage{\blankpage}
+
+% Thesis info
+\include{chapters/01_info.tex}
+\afterpage{\blankpage}
+
+% Table of Contents
+\tableofcontents
+
+% Chapters
+\include{chapters/02_introduction.tex}
+\include{chapters/03_chapter.tex}
+\include{chapters/04_summary.tex}
+
+% Bibliography
+\include{chapters/05_bibliography.tex}
+
+\listoffigures
+\listoftables
+
+\appendix
+\include{chapters/06_appendix.tex}
+
+\end{document}
